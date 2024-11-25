@@ -5,14 +5,14 @@ import pickle
 import base64
 
 # Load the model and dataset
-gradient_boosting_regressor = pickle.load(open('gradient_boosting_pipeline.pkl', 'rb'))
+best_regressor= pickle.load(open('gradient_boosting_pipeline.pkl', 'rb'))
 x_train = pd.read_csv('X_train.csv')
 
 # Function to make predictions
 def pred(Gender, Age, Height, Weight, Duration, Heart_rate, Body_temp):
     # Convert inputs to a NumPy array
     features = np.array([[Gender, Age, Height, Weight, Duration, Heart_rate, Body_temp]])
-    prediction = gradient_boosting_regressor.predict(features)
+    prediction = best_regressor.predict(features)
     return prediction[0]
 
 

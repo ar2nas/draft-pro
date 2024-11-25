@@ -1,0 +1,16 @@
+digraph Pipeline {
+	rankdir=LR size="8,5"
+	1 [label="Data Collection"]
+	2 [label="Data Preprocessing
+(Scaling, Encoding)"]
+	3 [label="Model Training
+(Gradient Boosting)"]
+	4 [label="Evaluation
+(MSE, R2)"]
+	5 [label="Pipeline Deployment
+(Flask/Streamlit)"]
+	1 -> 2
+	2 -> 3
+	3 -> 4
+	4 -> 5
+}

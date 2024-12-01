@@ -4,9 +4,9 @@ import pandas as pd
 import pickle
 import base64
 
-# Load the model and dataset
-best_regressor= pickle.load(open('gradient_boosting_pipeline.pkl', 'rb'))
-x_train = pd.read_csv('X_train.csv')
+# Load the trained Gradient Boosting model
+with open("gradient_boosting_best_model.pkl", "rb") as file:
+    best_regressor = pickle.load(file)
 
 # Function to make predictions
 def pred(Gender, Age, Height, Weight, Duration, Heart_rate, Body_temp):

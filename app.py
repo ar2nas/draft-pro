@@ -5,7 +5,7 @@ import pickle
 import base64
 
 # Load the trained Gradient Boosting model
-with open("gradient_boosting_best_model.pkl", "rb") as file:
+with open("xgboost_best_model.pkl", "rb") as file:
     best_regressor = pickle.load(file)
 
 # Function to make predictions

@@ -1,0 +1,3 @@
+Model,Best Parameters,MSE,R²,Accuracy
+Gradient Boosting,"{'learning_rate': 0.1, 'max_depth': 5, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 500}",1.8447037443769703,0.999523713207052,94.53333333333333
+XGBoost,"{'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 500, 'subsample': 0.8}",1.769046871979085,0.9995432471670327,94.36666666666666
